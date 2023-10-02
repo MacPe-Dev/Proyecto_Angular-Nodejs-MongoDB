@@ -1,0 +1,66 @@
+<div class="container mt-15">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{ titulo | uppercase }}</span>
+                    <form class="mb-3" [formGroup]="registroForm" (ngSubmit)="agregarUsuario()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="nombre" class="form-control" placeholder="Nombre">
+                            <div class="text-danger" *ngIf="registroForm.get('nombre')?.hasError('required') && registroForm.get('nombre')?.touched">
+                                <span>El nombre es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="apellidos" class="form-control" placeholder="Apellidos">
+                            <div class="text-danger" *ngIf="registroForm.get('apellidos')?.hasError('required') && registroForm.get('apellidos')?.touched">
+                                <span>Los apellidos son obligatorios</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="Fnacimiento" class="form-control" placeholder="Fecha de Nacimiento">
+                            <div class="text-danger" *ngIf="registroForm.get('Fnacimiento')?.hasError('required') && registroForm.get('Fnacimiento')?.touched">
+                                <span>La Fecha de naciemiento es obligatoria</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="email" class="form-control" placeholder="email">
+                            <div class="text-danger" *ngIf="registroForm.get('email')?.hasError('required') && registroForm.get('email')?.touched">
+                                <span>El email es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="telefono" class="form-control" placeholder="Telefono">
+                            <div class="text-danger" *ngIf="registroForm.get('telefono')?.hasError('required') && registroForm.get('telefono')?.touched">
+                                <span>El teléfono es obligatorio</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                          <input type="text" formControlName="foto" class="form-control" placeholder="Foto">
+                          <div class="text-danger" *ngIf="registroForm.get('foto')?.hasError('required') && registroForm.get('foto')?.touched">
+                              <span>La foto es obligatoria</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <input type="text" formControlName="pass" class="form-control" placeholder="Contraseña">
+                          <div class="text-danger" *ngIf="registroForm.get('pass')?.hasError('required') && registroForm.get('pass')?.touched">
+                              <span>El teléfono es obligatorio</span>
+                          </div>
+                      </div>
+                      <div class="mb-3">
+                          <input type="text" formControlName="tipo" class="form-control" placeholder="Alumno o Profesor">
+                          <div class="text-danger" *ngIf="registroForm.get('tipo')?.hasError('required') && registroForm.get('tipo')?.touched">
+                              <span>El tipo es obligatorio</span>
+                          </div>
+                      </div>
+                        <div class="mb-3 d-flex justify-content-evenly">
+                            <button class="btn btn-secondary" routerLink="/">VOLVER</button>
+                            <button class="btn btn-outline-info" routerLink="/alumno">LISTADO</button>
+                            <button type="submit" class="btn btn-success">ACEPTAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
