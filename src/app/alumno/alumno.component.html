@@ -1,0 +1,38 @@
+<div class="container mt5">
+    <div class="row">
+        <div class="w80">
+            <div class="card">
+                <div class="card-body">
+                    <span class="titulo">LISTADO DE USUARIOS</span>
+                    <button class="btn btn-success float-end" routerLink="/registro">NUEVO</button>
+                    <table *ngIf="listUsuarios.length > 0" class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Fecha N.</th>
+                            <th scope="col">email</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Foto</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let usuario of listUsuarios">
+                            <th scope="row">{{usuario.nombre}}</th>
+                            <td>{{usuario.apellidos}}</td>
+                            <td>{{usuario.Fnacimiento}}</td>
+                            <td>{{usuario.email}}</td>
+                            <td>{{usuario.telefono}}</td>
+                            <td>{{usuario.tipo}}</td>
+                            <td>{{usuario.foto}}</td>
+                            <td><i [routerLink]="['/editarUsuario', usuario._id]"class="fa-solid fa-pen-to-square text-primary"></i></td>
+                            <td><i (click)="eliminarUsuario(usuario._id)"class="fa-solid fa-trash text-danger"></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
