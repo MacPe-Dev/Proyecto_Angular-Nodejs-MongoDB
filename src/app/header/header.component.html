@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-light" data-bs-theme="light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Academia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/">Inicio
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/acceso">Acceso</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/cursos">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/alumnos">Alumnos</a>
+          </li><li class="nav-item">
+            <a class="nav-link" routerLink="/registro">Registro</a>
+          </li><li class="nav-item">
+            <a class="nav-link" routerLink="/contacto">Contacto</a>
+          </li><li class="nav-item">
+            <a class="nav-link" routerLink="/tareas">Tareas</a>
+          </li>
+          <li class="nav-item dropdown">
+            <div class="dropdown-menu">
+                <a class="dropdown-item" routerLink="/">Inicio</a>
+                <a class="dropdown-item" routerLink="/acceso">Acceso</a>
+                <a class="dropdown-item" routerLink="/cursos">Cursos</a>
+                <a class="dropdown-item" routerLink="/alumnos">Alumnos</a>
+                <a class="dropdown-item" routerLink="/registro">Registro</a>
+                <a class="dropdown-item" routerLink="/contacto">Contacto</a>
+                <a class="dropdown-item" routerLink="/tareas">Tareas</a>
+            </div>
+          </li>
+        </ul>
+        <app-mensajes></app-mensajes>  
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Buscar">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+   
+  </nav>
